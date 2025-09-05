@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shri Krishna Sanitary Hardware and Paints</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f4; color: #333; }
+    header { background: linear-gradient(90deg, #ff6f61, #ffcc00, #00b894, #0984e3); color: white; padding: 25px; text-align: center; }
+    nav { background: #2c3e50; padding: 12px; text-align: center; }
+    nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
+    nav a:hover { color: #f1c40f; }
+    .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; padding: 20px; }
+    .card { cursor: pointer; position: relative; overflow: hidden; padding: 15px; border-radius: 10px; text-align: center; background: white; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.2s; }
+    .card:hover { transform: scale(1.03); }
+    .card::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; opacity: 0.3; z-index: 0; }
+    .card h3, .card p { position: relative; z-index: 1; }
+    .card.paint::before { background-image: url('https://img.freepik.com/free-photo/multi-colored-paint-background_53876-92944.jpg'); }
+    .card.sanitary::before { background-image: url('https://img.freepik.com/free-photo/bathroom-interior_1127-3456.jpg'); }
+    .card.hardware::before { background-image: url('https://img.freepik.com/free-photo/construction-tools_23-2147742133.jpg'); }
+
+    .item-list { display: none; margin: 20px auto; padding: 20px; background: #fff; border-radius: 8px; width: 90%; max-width: 800px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+    .item-list h4 { margin-top: 0; }
+    .item-list ul { list-style: none; padding: 0; }
+    .item-list li { padding: 8px; border-bottom: 1px solid #ddd; }
+    .item-list li:last-child { border-bottom: none; }
+
+    .brands { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; padding: 20px; }
+    .brands img { width: 120px; object-fit: contain; }
+
+    #contact { background: #ecf0f1; padding: 25px; text-align: center; }
+    #contact a { display: inline-block; margin: 8px; padding: 12px 18px; color: white; border-radius: 6px; text-decoration: none; font-weight: bold; }
+    .call { background: #0984e3; }
+    .whatsapp { background: #25d366; }
+    .map { background: #f39c12; }
+    .instagram { background: #e1306c; }
+    #contact a:hover { opacity: 0.9; }
+
+    footer { background: #2c3e50; color: white; text-align: center; padding: 15px; margin-top: 30px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Shri Krishna Sanitary Hardware and Paints</h1>
+    <p>Owner: Brijesh Rai | Raisen, Madhya Pradesh</p>
+  </header>
+
+  <nav>
+    <a href="#products">Products</a>
+    <a href="#brands">Brands</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="products" class="container">
+    <div class="card paint" onclick="toggleList('paint-list')">
+      <h3>Paints</h3>
+      <p>Wall Paints, Enamel, Primers</p>
+    </div>
+    <div class="card sanitary" onclick="toggleList('sanitary-list')">
+      <h3>Sanitary</h3>
+      <p>Taps, Pipes, Bathroom Fittings</p>
+    </div>
+    <div class="card hardware" onclick="toggleList('hardware-list')">
+      <h3>Hardware</h3>
+      <p>Locks, Tools, Cement, Wall Putty</p>
+    </div>
+  </section>
+
+  <!-- Paints list -->
+  <div id="paint-list" class="item-list">
+    <h4>🎨 Paints (Approx MP Market Rates)</h4>
+    <ul>
+      <li>Asian Paints Tractor Emulsion – ₹220 / Litre</li>
+      <li>Asian Paints Royale Luxury – ₹480 / Litre</li>
+      <li>Dulux Velvet Touch – ₹450 / Litre</li>
+      <li>Dulux Weathershield Max – ₹380 / Litre</li>
+      <li>British Paints Interior Emulsion – ₹250 / Litre</li>
+      <li>British Paints Exterior Primer – ₹200 / Litre</li>
+      <li>Indigo Exterior Emulsion – ₹240 / Litre</li>
+      <li>Indigo Wall Putty (20 kg) – ₹500</li>
+    </ul>
+  </div>
+
+  <!-- Sanitary list -->
+  <div id="sanitary-list" class="item-list">
+    <h4>🚿 Sanitary Items (Approx MP Market Rates)</h4>
+    <ul>
+      <li>Cera Wash Basin – ₹1500 onwards</li>
+      <li>Parryware Commode – ₹4200 onwards</li>
+      <li>Brass Bathroom Tap – ₹550</li>
+      <li>Shower Set – ₹950</li>
+      <li>PVC Pipe 1″ – ₹120/m</li>
+      <li>PVC Pipe 2″ – ₹200/m</li>
+      <li>Angle Valve – ₹250</li>
+      <li>Health Faucet – ₹650</li>
+    </ul>
+  </div>
+
+  <!-- Hardware list -->
+  <div id="hardware-list" class="item-list">
+    <h4>🔧 Hardware Items (Approx MP Market Rates)</h4>
+    <ul>
+      <li>Godrej Door Lock – ₹650 onwards</li>
+      <li>Mortise Lock – ₹900 onwards</li>
+      <li>Steel Hammer – ₹180</li>
+      <li>Screwdriver Set – ₹300</li>
+      <li>ACC/UltraTech Cement Bag – ₹380–420</li>
+      <li>Wall Putty (40 kg) – ₹700 (current MP average price)</li>
+      <li>Paint Brush Set – ₹120 onwards</li>
+      <li>Tile Adhesive – ₹550 / bag</li>
+    </ul>
+  </div>
+
+  <section id="brands">
+    <h2 style="text-align:center; padding:20px;">Our Brands</h2>
+    <div class="brands">
+      <img src="https://upload.wikimedia.org/wikipedia/en/2/23/Asian_Paints_logo.svg" alt="Asian Paints">
+      <img src="https://1000logos.net/wp-content/uploads/2020/05/Dulux-Logo.png" alt="Dulux">
+      <img src="https://seeklogo.com/images/B/british-paints-logo-3B4B4DAB2B-seeklogo.com.png" alt="British Paints">
+      <img src="https://indigopaints.com/wp-content/uploads/2021/05/indigo-paints-logo.png" alt="Indigo Paints">
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>📞 Contact Us</h2>
+    <p><strong>Phone:</strong> <a href="tel:+917748879963">77488 79963</a>, <a href="tel:+919039566949">90395 66949</a></p>
+    <p><strong>Email:</strong> <a href="mailto:shrikrishnasanitaryhardwareand@gmail.com">shrikrishnasanitaryhardwareand@gmail.com</a></p>
+
+    <a class="call" href="tel:+917748879963">📞 Call Us</a>
+    <a class="whatsapp" href="https://wa.me/917748879963" target="_blank">💬 WhatsApp Us</a>
+    <a class="map" href="https://maps.app.goo.gl/gZDCW7RjzahtxL418" target="_blank">📍 Get Directions</a>
+    <a class="instagram" href="https://www.instagram.com/shri_krishna._paint_shop" target="_blank">📷 Instagram</a>
+  </section>
+
+  <footer>
+    <p>© 2025 Shri Krishna Sanitary Hardware and Paints | Owner: Brijesh Rai</p>
+  </footer>
+
+  <script>
+    function toggleList(id) {
+      document.querySelectorAll('.item-list').forEach(el => el.style.display = (el.id === id && el.style.display !== 'block') ? 'block' : 'none');
+    }
+  </script>
+
+</body>
+</html>
