@@ -173,6 +173,34 @@
       <button>✍ Write Your Review on Google</button>
     </a>
   </section>
+<section id="order" style="background:#fff;padding:30px;text-align:center;">
+  <h2>🛒 Place Your Order</h2>
+  <p>Select product and quantity, and send us directly on WhatsApp</p>
+  <select id="product" style="padding:10px;margin:10px;">
+    <option value="Asian Paints Tractor Emulsion">Asian Paints Tractor Emulsion</option>
+    <option value="Asian Paints Royale Luxury">Asian Paints Royale Luxury</option>
+    <option value="Dulux Velvet Touch">Dulux Velvet Touch</option>
+    <option value="British Paints Interior Emulsion">British Paints Interior Emulsion</option>
+    <option value="Indigo Wall Putty 20kg">Indigo Wall Putty 20kg</option>
+    <option value="Cera Wash Basin">Cera Wash Basin</option>
+    <option value="Godrej Door Lock">Godrej Door Lock</option>
+  </select>
+
+  <input type="number" id="quantity" placeholder="Quantity" style="padding:10px;margin:10px;width:100px;">
+  <br>
+  <button onclick="sendOrder()" style="padding:12px 20px;background:#25d366;color:white;border:none;border-radius:6px;cursor:pointer;font-weight:bold;">
+    📩 Send Order on WhatsApp
+  </button>
+</section>
+
+<script>
+  function sendOrder() {
+    let product = document.getElementById("product").value;
+    let quantity = document.getElementById("quantity").value;
+    let message = `Hi, I want to order: ${product} - Quantity: ${quantity}`;
+    window.open(`https://wa.me/917748879963?text=${encodeURIComponent(message)}`, '_blank');
+  }
+</script>
 
   <!-- Contact -->
   <section id="contact">
@@ -198,4 +226,5 @@
 
 </body>
 </html>
+
 
